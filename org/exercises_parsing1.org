@@ -71,7 +71,6 @@ let main argv =
    will be transformed to the value of fp*0.1. For example, the text
    "hello 2.7" should be transformed to the text "hello 0.27".
 
-
 5. Run the generated lexer on a C++ tutorial for the Robot Operating
 System:
 https://github.com/ros/ros_tutorials/blob/noetic-devel/turtlesim/tutorials/draw_square.cpp
