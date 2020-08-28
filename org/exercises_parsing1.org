@@ -78,6 +78,6 @@ let main argv =
    included in your handin. The output should be put in a file called
    draw_square_transformed.cpp.
 
-   Hint: Supppose you can run your lexer with a command "mylex", then
+   Hint: Suppose you can run your lexer with a command "mylex", then
    you can use a pipeline to get the output into a file : "cat
    draw_square.cpp | mylex > draw_square_transformed.cpp"
