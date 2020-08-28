@@ -56,7 +56,11 @@ let main argv =
    the states of the automaton by reading the report output when the
    lexer is generated.
 
-3. Modify the lexer specification file so that it recognizes a
+3. Draw a DFA corresponding to the lexer.
+
+   Hint: One of the states should indicate errors.
+
+4. Modify the lexer specification file so that it recognizes a
    floating-point number. To test, generate the lexer and run it. With
    an input 2.7, the output should be "The lexer recognizes 2.7".
 
@@ -65,13 +69,13 @@ let main argv =
    but this one needs to be improved as it also matches the empty
    string.
 
-4. Modify the lexer specification file again so that it does two
+5. Modify the lexer specification file again so that it does two
    additional things. First, anything that is not floating-point is
    preserved as is. Second, a floating-point number, denoted by fp,
    will be transformed to the value of fp*0.1. For example, the text
    "hello 2.7" should be transformed to the text "hello 0.27".
 
-5. Run the generated lexer on a C++ tutorial for the Robot Operating
+6. Run the generated lexer on a C++ tutorial for the Robot Operating
    System: https://github.com/ros/ros_tutorials/blob/noetic-devel/turtlesim/tutorials/draw_square.cpp
 
    Your output of running your lexer on the file above should be
