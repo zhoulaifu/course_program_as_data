@@ -72,12 +72,12 @@ let main argv =
    "hello 2.7" should be transformed to the text "hello 0.27".
 
 5. Run the generated lexer on a C++ tutorial for the Robot Operating
-System:
-https://github.com/ros/ros_tutorials/blob/noetic-devel/turtlesim/tutorials/draw_square.cpp
+   System: https://github.com/ros/ros_tutorials/blob/noetic-devel/turtlesim/tutorials/draw_square.cpp
 
- Hand in your output of running your lexer on the file above. Put the
- output in a file called draw_square_transformed.cpp.
+   Your output of running your lexer on the file above should be
+   included in your handin. The output should be put in a file called
+   draw_square_transformed.cpp.
 
- Hint: Supppose you can run your lexer with a command "mylex", then
- you can use a pipeline to get the output into a file : "cat
- draw_square.cpp | mylex > draw_square_transformed.cpp"
+   Hint: Supppose you can run your lexer with a command "mylex", then
+   you can use a pipeline to get the output into a file : "cat
+   draw_square.cpp | mylex > draw_square_transformed.cpp"
