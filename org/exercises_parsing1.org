@@ -60,7 +60,6 @@ let main argv =
    floating-point number. To test, generate the lexer and run it. With
    an input 2.7, the output should be "The lexer recognizes 2.7".
 
-
    Hint: You may consider the represent floating point numbers as a
    regular expression. A starting point might be [-+]?[0-9]*\.?[0-9]*,
    but this one needs to be improved as it also matches the empty
