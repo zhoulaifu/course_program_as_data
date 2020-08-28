@@ -3,16 +3,16 @@ This document lists the exercises proposed for lecture 2 of the course
 "Program as data".
 
 
-* Exercise 1. (Review for the last class)
-Exercise 2.4 from the PLC book.
-* Exercise 2. (Review for the last class)
-Exercise 2.5 from the PLC book.
-* Exercise 3. (Regular expressions)
-Exercise 1.2 from Mogensen's book.
-* Exercise 4. (Regular expressions, NFA, DFA, and their conversions)
-Exercise 1.3 from Mogensen's book
-* Exercise 5. (Regular expressions, NFA, DFA, and their conversions)
-Exercise 3.2 from the PLC book
+* Exercise 1.
+Review for the last class: Exercise 2.4 from the PLC book.
+* Exercise 2.
+Review for the last class: Exercise 2.5 from the PLC book.
+* Exercise 3.
+Regular expressions: Exercise 1.2 from Mogensen's book.
+* Exercise 4.
+ NFA and DFA: Exercise 1.3 from Mogensen's book
+* Exercise 5.
+NFA aand DFA: Exercise 3.2 from the PLC book
 * Exercise 6. (A little lexing project)
 A minimal lexer specification is provided below.
 
