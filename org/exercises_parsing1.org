@@ -1,0 +1,85 @@
+* About
+This document lists the exercises proposed for lecture 2 of the course
+"Program as data".
+
+
+* Exercise 1. (Review for the last class)
+Exercise 2.4 from the PLC book.
+* Exercise 2. (Review for the last class)
+Exercise 2.5 from the PLC book.
+* Exercise 3. (Regular expressions)
+Exercise 1.2 from Mogensen's book.
+* Exercise 4. (Regular expressions, NFA, DFA, and their conversions)
+Exercise 1.3 from Mogensen's book
+* Exercise 5. (Regular expressions, NFA, DFA, and their conversions)
+Exercise 3.2 from the PLC book
+* Exercise 6. (A little lexing project)
+A minimal lexer specification is provided below.
+
+
+#+BEGIN_SRC
+{ // starting
+
+module Hello_fslex
+open FSharp.Text.Lexing
+open System
+}
+
+rule Tokenize = parse
+  | ['0'-'9']      { LexBuffer<char>.LexemeString lexbuf }
+  | _               { failwith "Lexer error: illegal symbol" }
+
+
+{ // ending
+
+[<EntryPoint>]
+let main argv =
+      printfn "Hello World from FsLex!\n\nPlease pass a digit:"
+      let input = Console.ReadLine()
+      let res=Tokenize (LexBuffer<char>.FromString input)
+      printfn "The lexer recognizes %s" res
+      0
+
+}
+#+END_SRC
+
+
+1. Read the specification. What are the regular expressions involved,
+   and which semantic values are they associated with?
+
+2. Generate the lexer out of the specification using a command
+   prompt. Which additional file is generated during the process? How
+   many states are there by the automaton of the lexer?
+
+   Hint: Instructions for generating the lexer here may be helpful:
+   https://github.com/zhoulaifu/hello_fslex; you can get the number of
+   the states of the automaton by reading the report output when the
+   lexer is generated.
+
+3. Modify the lexer specification file so that it recognizes a
+   floating-point number. To test, generate the lexer and run it. With
+   an input 2.7, the output should be "The lexer recognizes 2.7".
+
+
+   Hint: You may consider the represent floating point numbers as a
+   regular expression. A starting point might be [-+]?[0-9]*\.?[0-9]*,
+   but this one needs to be improved as it also matches the empty
+   string.
+
+4. Modify the lexer specification file again so that it does two
+   additional things. First, anything that is not floating-point is
+   preserved as is. Second, a floating-point number, denoted by fp,
+   will be transformed to the value of fp*0.1. For example, the text
+   "hello 2.7" should be transformed to the text "hello 0.27".
+
+
+5 Run the generated lexer on a C++ tutorial for the Robot Operating
+System:
+https://github.com/ros/ros_tutorials/blob/noetic-devel/turtlesim/tutorials/draw_square.cpp
+
+ Hand in your output of running your lexer on the file above. Put the
+ output in a file called draw_square_transformed.cpp.
+
+ Hint: Supppose you can run your lexer with a command "mylex", then
+ you can use a pipeline to get the output into a file : "cat
+ draw_square.cpp | mylex > draw_square_transformed.cpp"
