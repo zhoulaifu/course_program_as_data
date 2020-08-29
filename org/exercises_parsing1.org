@@ -51,7 +51,10 @@ let main argv =
    prompt. Which additional file is generated during the process? How
    many states are there by the automaton of the lexer?
 
-   Hint: Instructions for generating the lexer here may be helpful:
+   Hint: You can generate the lexer with the command "dotnet fslex.dll
+   --unicode myfile.fsl", in which "dotnet" is from .Net Core,
+   fslex.dll should point to the path of the DLL file.  If you use MS
+   Visual Studio, you may find instructions here useful:
    https://github.com/zhoulaifu/hello_fslex; you can get the number of
    the states of the automaton by reading the report output when the
    lexer is generated.
