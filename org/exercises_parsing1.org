@@ -63,27 +63,26 @@ let main argv =
 
    Hint: One of the states should indicate errors.
 
-4. Modify the lexer specification file so that it recognizes a
-   floating-point number. To test, generate the lexer and run it. With
-   an input 2.7, the output should be "The lexer recognizes 2.7".
+4. Modify the lexer specification file so that it transforms a text
+   with floating-point numbers to another one where all texts are the
+   same except that any floating-point number, deonoted by fp, become
+   0.1*fp.
 
-   Hint: You may consider the represent floating point numbers as a
-   regular expression. A starting point might be [-+]?[0-9]*\.?[0-9]*,
-   but this one needs to be improved as it also matches the empty
-   string.
+   Hint: You may consider using [+-]?([0-9]*[.])?[0-9]+ as the regular
+   expressions for floating-point numbers. This will match, for
+   example, 12, 12.45, or .67. You may also use a different regular
+   expression that recognizes not 12 or .67, but it must be able to
+   recognize numbers with a digit in the middle, like 12.45.
 
-5. Modify the lexer specification file again so that it does two
-   additional things. First, anything that is not floating-point is
-   preserved as is. Second, a floating-point number, denoted by fp,
-   will be transformed to the value of fp*0.1. For example, the text
-   "hello 2.7" should be transformed to the text "hello 0.27".
+   To test, generate the lexer and run it with an input "hello 2.7",
+   the output should be "hello 0.27".
 
-6. Run the generated lexer on a C++ tutorial for the Robot Operating
-   System: https://github.com/ros/ros_tutorials/blob/noetic-devel/turtlesim/tutorials/draw_square.cpp
+5. Run the generated lexer on a piece C++ code used in the Robot
+   Operating System:
+   https://github.com/ros/ros_tutorials/blob/noetic-devel/turtlesim/tutorials/draw_square.cpp
 
-   Your output of running your lexer on the file above should be
-   included in your handin. The output should be put in a file called
-   draw_square_transformed.cpp.
+   Your transformed text from the output should be included in your
+   handin. Name it draw_square_transformed.cpp.
 
    Hint: Suppose you can run your lexer with a command "mylex", then
    you can use a pipeline to get the output into a file : "cat
