@@ -72,7 +72,6 @@ let main argv =
    expression that recognizes not 12 or .67, but it must be able to
    recognize numbers with a digit in the middle, like 12.45.
 
-
 5. Testing. Generate the lexer and run it with an input "hello 2.7",
    the output should be "hello 0.27".
 
@@ -80,13 +79,9 @@ let main argv =
    Operating System:
    https://github.com/ros/ros_tutorials/blob/noetic-devel/turtlesim/tutorials/draw_square.cpp
 
-
-
    Hint: Suppose you can run your lexer with a command "mylex", then
    you can use a pipeline to get the output: "cat draw_square.cpp |
    mylex".
-
-
 
 Your handin for this exercise should include (1) the lexer
 specification file; and (2) the transfomed text from running the lexer
